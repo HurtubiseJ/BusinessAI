@@ -1,0 +1,13 @@
+type: object
+required:
+  - name
+  - role
+  - scope
+  - allowed_paths
+  - tools
+properties:
+  name: { type: string }
+  role: { type: string }
+  scope: { type: string }
+  allowed_paths: { type: array, items: { type: string } }
+  tools: { type: array, items: { type: string } }

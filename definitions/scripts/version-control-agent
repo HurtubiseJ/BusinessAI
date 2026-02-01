@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Version Control Agent Interactive Session
+
+# Set paths
+AGENT_DIR="$(dirname "$0")/../agents/version-control-agent"
+TOOLS_DIR="$(dirname "$0")/../tools"
+
+# Extract allowed paths from YAML
+ALLOWED_PATHS=$(grep 'allowed_paths:' "$AGENT_DIR/agent.yaml" | sed 's/allowed_paths://;s/ //g')
+
+# System prompt and guardrails
+SYSTEM_PROMPT="$AGENT_DIR/system.md"
+GUARDRAILS="$AGENT_DIR/guardrails.md"
+
+echo "Launching Frontend Agent Interactive Session..."
+echo "Allowed paths: $ALLOWED_PATHS"
+echo "Type 'exit' to quit the session."
+
+# Launch Claude CLI in interactive mode
+claude chat \
+  --system "$SYSTEM_PROMPT" \
+  --allowed-paths $ALLOWED_PATHS \
+  --tools "$TOOLS_DIR/git/git_tool.sh" \
+  --interactive

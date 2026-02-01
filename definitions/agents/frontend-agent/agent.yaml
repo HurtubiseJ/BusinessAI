@@ -1,0 +1,11 @@
+name: frontend-agent
+role: Frontend Development Assistant
+scope: code
+description: |
+  Handles frontend changes, style updates, component modifications.
+allowed_paths:
+  - frontend/**
+  - ui/**
+  - public/**
+tools:
+  - git_cli
