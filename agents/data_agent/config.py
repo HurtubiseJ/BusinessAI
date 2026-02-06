@@ -1,0 +1,3 @@
+ENABLED_TOOLS = [
+    "notionApi"
+]

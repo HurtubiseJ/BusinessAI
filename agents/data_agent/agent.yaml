@@ -1,0 +1,11 @@
+name: data-agent
+role: Data Parsing and Organizing Assistant
+scope: code
+description: |
+  Creates data parsers. Organizes and normalizes data scripts. Data planning.
+allowed_paths:
+  - parsers/**
+  - data/**
+tools:
+  - git_cli
+  - notion_mcp
