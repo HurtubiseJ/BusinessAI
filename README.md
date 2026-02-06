@@ -1,5 +1,25 @@
 # BusinessAI 
-This repo give configuration to add specialized claude code instances. DO NOT modify this repo.
+This repo give configuration to add specialized claude code instances. This repo is not intended to be modfied here. This repo is a **submodule** or **subrepo** that is added to exisiting repositories. 
+
+# **IMPORTANT** ADD .env FILE in /services/notion/.env 
+You will need to add a `.env` file in the /services/notion/ directory. 
+I needs the key=value `NOTION_TOKEN=ntn_XXXX...` 
+
+**SEE THIS LINK TO GET YOUR NOTION TOKEN**: https://github.com/mcp/makenotion/notion-mcp-server
+
+# Submodule Commands
+Here are a few important submodule commands to update this subrepo
+
+## Pull changes
+`root$ git submodule update --remote` Pulls current BuisnessAI code from remote. Update automatically.
+
+**NOTE:** `git pull` alone will NOT update the submodule
+
+## Push changes
+If you need to make changes to this repo you will need to push to **BuinessAI/ MAIN REPO**. You cannot push changes via the main (non-submodule) git repo. 
+
+`cd` into BuinessAI/ and git push there. 
+
 
 # Dependencies
 You must have docker installed on your computer. 
