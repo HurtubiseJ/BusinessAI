@@ -15,4 +15,4 @@ DO NOT use this tool for:
 - Temporary scratch notes
 
 # Rules
-Pages containing CHECKED property `CLAUDE ACCESS` are able to be read and modified. This includes databases on such pages. Created pages should check this property.
+Pages and sub-objects containing CHECKED property `CLAUDE ACCESS` are able to be read and modified. This includes databases on such pages. Created pages should check this property.
