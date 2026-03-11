@@ -33,6 +33,12 @@ def ensureServices(services: list[str]):
         else:
             print("notionApi service running...")
 
+    # if 'supabase' in services:
+    #     url = "http://localhost:54321/mcp"
+    #     up = _check_url(url)
+
+
+
 def waitForService(url: str, timeout: int = 10):
     start = time.time()
     while time.time() - start < timeout:

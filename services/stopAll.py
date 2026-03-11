@@ -3,7 +3,8 @@ import subprocess
 
 TOOLS = [
     'git',
-    'notion-mcp'
+    'notionApi',
+    'supabase'
 ]
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))

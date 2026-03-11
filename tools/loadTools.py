@@ -5,7 +5,7 @@ import subprocess
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 def get_config(toolName: str) -> str:
-    path = os.path.join(BASE_DIR, 'tools', 'notionApi', 'mcp.json')
+    path = os.path.join(BASE_DIR, 'tools', toolName, 'mcp.json')
 
     if not os.path.exists(path):
         print("No config found for:", toolName)
